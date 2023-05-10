@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { getAllEvents } from "/helpers/api";
 import EventList from "/components/events/EventList";
 import EventsSearch from "@/components/events/EventSearch";
 
-function AllEventsPage() {
-  const [events, setEvents] = useState([]);
+function AllEventsPage(props) {
   const router = useRouter();
+  const events = props.events
 
   function findEventsHandler(year, month) {
     const fullPath = `/events/${year}/${month}`;
@@ -14,23 +14,33 @@ function AllEventsPage() {
     router.push(fullPath);
   }
 
-  useEffect(() => {
-    getAllEvents().then((events) => {
-      setEvents(events);
-    });
-  }, []);
-
-
-  if (!events.length) {
-    return <p>Loading...</p>;
-  }
-
   return (
     <>
-      <EventsSearch onSearch={findEventsHandler}/>
+      <Head>
+        <title>All my events</title>
+      </Head>
+      <Head>
+        <title>All Events</title>
+        <meta
+          name='description'
+          content='Find a lot of great events that allow you to evolve...'
+        />
+      </Head>
+      <EventsSearch onSearch={findEventsHandler} />
       <EventList events={events} />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const events = await getAllEvents();
+
+  return {
+    props: {
+      events: events,
+    },
+    revalidate: 60,
+  };
 }
 
 export default AllEventsPage;
