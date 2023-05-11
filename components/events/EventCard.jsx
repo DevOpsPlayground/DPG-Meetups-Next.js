@@ -6,11 +6,6 @@ import { IoLocation } from "react-icons/io5";
 export default function EventCard({ event }) {
   const eventid = event.id;
   return (
-    // <div className={styles.event_card}>
-    //   <Link href={`/events/${eventid}`}>{event.title}</Link>
-    //   <p>{event.date}</p>
-    //   <p>{event.location}</p>
-    // </div>
 
     <div className={styles.event_card}>
       <div className={styles.event_card_date}>
