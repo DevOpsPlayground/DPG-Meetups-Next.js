@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import EventList from "./events";
+import EventList from "./../components/events/EventList";
 import { getFeaturedEvents } from '/helpers/api';
 
 
@@ -13,6 +13,8 @@ export default function Homepage(props) {
           content='Find a lot of great events that allow you to learn...'
         />
       </Head>
+      <h1>WELCOME TO DEVOPS PLAYGROUND EVENTS PAGE</h1>
+      <h2>Featured Events</h2>
       <EventList events={props.events} />
     </div>
   );
