@@ -3,6 +3,9 @@ import { getFilteredEvents } from "../../helpers/api";
 import { useRouter } from 'next/router';
 import EventCard from "../../components/events/EventCard";
 import Link from 'next/link';
+import { MdEventBusy } from 'react-icons/md';
+import { TbArrowBackUp } from 'react-icons/tb';
+import styles from "./EventsSearchResult.module.css"
 
 export default function EventSearchPage() {
   const [filteredEvents, setFilteredEvents] = useState([]);
@@ -34,14 +37,21 @@ export default function EventSearchPage() {
   }
 
   return (
-    <div className='EventSearchPage'>
-      {noEvents && <p>No Events</p>}
-      {filteredEvents.map((event) => {
-        return <EventCard event={event} key={event.id} />;
-      })}
-      <Link href='/'>
-        <p>Back to all events</p>
+    <>
+      <div className={styles.event_search_page}>
+        {noEvents && (
+          <div className={styles.no_events_container}>
+            <MdEventBusy size={200} className={styles.no_events_icon} />
+            <p className={styles.no_events_text}>No events found</p>
+          </div>
+        )}
+        {filteredEvents.map((event) => {
+          return <EventCard event={event} key={event.id} />;
+        })}
+      </div>
+      <Link href={`/events`} className={styles.back_button}>
+        <TbArrowBackUp size={50} color="white" />
       </Link>
-    </div>
+    </>
   );
 }
