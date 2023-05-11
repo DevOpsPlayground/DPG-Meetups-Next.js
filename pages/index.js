@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import EventList from "./events";
-import { getAllEvents } from '/helpers/api';
+import { getFeaturedEvents } from '/helpers/api';
 
 
 export default function Homepage(props) {
@@ -19,7 +19,7 @@ export default function Homepage(props) {
 }
 
 export async function getStaticProps() {
-  const events = await getAllEvents();
+  const events = await getFeaturedEvents();
 
   return {
     props: {
