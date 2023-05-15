@@ -1,10 +1,10 @@
 import Nav from "./Nav";
 
-function Layout(props) {
+function Layout({children}) {
   return (
     <>
       <Nav />
-      <main>{props.children}</main>
+      <main>{children}</main>
     </>
   );
 }

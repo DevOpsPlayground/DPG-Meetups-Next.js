@@ -4,26 +4,36 @@ import { getAllEvents } from "/helpers/api";
 import EventList from "/components/events/EventList";
 import EventsSearch from "@/components/events/EventSearch";
 
-function AllEventsPage(props) {
+function AllEventsPage({ events }) {
   const router = useRouter();
-  const events = props.events
-
   function findEventsHandler(year, month) {
     const fullPath = `/events/${year}/${month}`;
 
     router.push(fullPath);
   }
 
+  if (!events.length) {
+    return (
+      <div className="loading_container">
+        <div className="lds-ring">
+          {" "}
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p className="loading_text">Getting your events...</p>
+      </div>
+    );
+  }
+
   return (
     <>
       <Head>
-        <title>All my events</title>
-      </Head>
-      <Head>
         <title>All Events</title>
         <meta
-          name='description'
-          content='Find a lot of great events that allow you to evolve...'
+          name="description"
+          content="Find a lot of great events that allow you to evolve..."
         />
       </Head>
       <EventsSearch onSearch={findEventsHandler} />
