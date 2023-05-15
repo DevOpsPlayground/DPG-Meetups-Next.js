@@ -1,7 +1,8 @@
 import Head from "next/head";
-import { getFeaturedEvents } from "/helpers/api";
 import EventList from "./../components/../components/events/EventList";
 import styles from "./Index.module.css";
+import fs from "fs/promises";
+import path from "path"
 
 export default function Homepage({events}) {
   if (!events.length) {
@@ -36,11 +37,20 @@ export default function Homepage({events}) {
 }
 
 export async function getStaticProps() {
-  const events = await getFeaturedEvents();
+  const filePath = path.join(process.cwd(), "data", "dpg-meetups-file.json")
+ const jsonEvents = await fs.readFile(filePath);
+ const allEvents = JSON.parse(jsonEvents);
+
+ const featuredEvents = allEvents.meetups.filter((event) => event.featured);
+
+
+ console.log(featuredEvents)
+
+
 
   return {
     props: {
-      events: events,
+      events: featuredEvents,
     },
     revalidate: 1800,
   };
