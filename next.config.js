@@ -2,10 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    mongoDB_username: "", 
-    mongoDB_password: "",
-    mongoDB_cluster: "", 
-    mongoDB_database: "",
+    mongoDB_username: "INSERT", 
+    mongoDB_password: "INSERT",
+    mongoDB_cluster: "INSTER", 
+    mongoDB_database: "INSERT",
   }
 }
 
