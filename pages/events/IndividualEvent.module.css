@@ -45,6 +45,14 @@
   margin-left: 0.4rem;
 }
 
+.main_title {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  padding: 3rem 0;
+}
+
+
 @media (max-width: 768px) {
   .info_text {
     font-size: x-small;
