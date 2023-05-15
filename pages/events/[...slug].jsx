@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import { getFilteredEvents } from "../../helpers/api";
-import { useRouter } from "next/router";
 import EventCard from "../../components/events/EventCard";
 import Link from "next/link";
 import { MdEventBusy } from "react-icons/md";
