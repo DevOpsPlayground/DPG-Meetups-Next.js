@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { getAllEvents } from "/helpers/api";
 import EventList from "/components/events/EventList";
 import EventsSearch from "@/components/events/EventSearch";
+import { MongoClient } from "mongodb";
 
 function AllEventsPage({ events }) {
   const router = useRouter();
@@ -14,15 +15,15 @@ function AllEventsPage({ events }) {
 
   if (!events.length) {
     return (
-      <div className="loading_container">
-        <div className="lds-ring">
+      <div className='loading_container'>
+        <div className='lds-ring'>
           {" "}
           <div></div>
           <div></div>
           <div></div>
           <div></div>
         </div>
-        <p className="loading_text">Getting your events...</p>
+        <p className='loading_text'>Getting your events...</p>
       </div>
     );
   }
@@ -32,8 +33,8 @@ function AllEventsPage({ events }) {
       <Head>
         <title>All Events</title>
         <meta
-          name="description"
-          content="Find a lot of great events that allow you to evolve..."
+          name='description'
+          content='Find a lot of great events that allow you to evolve...'
         />
       </Head>
       <EventsSearch onSearch={findEventsHandler} />
@@ -43,11 +44,27 @@ function AllEventsPage({ events }) {
 }
 
 export async function getStaticProps() {
-  const events = await getAllEvents();
+
+  const DB_STRING = `mongodb+srv://${process.env.mongoDB_username}:${process.env.mongoDB_password}@${process.env.mongoDB_cluster}.21rhrh2.mongodb.net/${process.env.mongoDB_database}?retryWrites=true&w=majority`;
+  
+  const client = await MongoClient.connect(DB_STRING);
+  const db = client.db();
+  const meetupCollection = db.collection("meetups");
+  const events = await meetupCollection.find().toArray();
+  
+  client.close();
 
   return {
     props: {
-      events: events,
+      events: events.map((event) => ({
+        date: event.date,
+        description: event.description,
+        featured: event.featured,
+        location: event.location,
+        presenters: event.presenters,
+        title: event.title,
+        id: event._id.toString(),
+      })),
     },
     revalidate: 60,
   };

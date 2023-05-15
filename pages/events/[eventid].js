@@ -5,16 +5,6 @@ import styles from "./IndividualEvent.module.css";
 import Image from "next/image";
 
 export default function IndividualEventPage({event}) {
-  if (isNaN(event.id)) {
-    return (
-      <>
-        <div className="loading_container">
-          <p className="loading_text">Invalid event url...</p>
-        </div>
-      </>
-    );
-  }
-
   if (!event) {
     return (
       <div className="loading_container">
@@ -58,6 +48,7 @@ export default function IndividualEventPage({event}) {
 
 export async function getStaticProps(context) {
   const eventId = context.params.eventid;
+
 
   const event = await getEventById(eventId);
 

@@ -21,12 +21,12 @@ export default function Homepage({events}) {
   return (
     <div className="Homepage">
       <Head>
-        <h1 className="main_title">Welcome to DevOps Playground Events Page</h1>
         <meta
           name="description"
           content="Find a lot of great events that allow you to learn..."
         />
       </Head>
+      <h1 className="main_title">Welcome to DevOps Playground Events Page</h1>
       <div className={styles.feature_title_container}>
         <h2 className={styles.feature_title}>Featured Events</h2>
       </div>
