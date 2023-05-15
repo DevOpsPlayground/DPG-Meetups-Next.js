@@ -11,13 +11,20 @@
   flex-direction: column;
   align-items: center;
   justify-items: center;
-   height: 3rem;
+  height: 3rem;
   width: 20rem;
   border: white 2px solid;
   border-radius: 40px;
   margin: auto;
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.main_title {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  padding: 3rem 0;
 }
 
 @media (max-width: 768px) {
