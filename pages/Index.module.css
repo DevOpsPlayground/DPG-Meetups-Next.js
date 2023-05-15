@@ -20,6 +20,13 @@
   margin-bottom: 3rem;
 }
 
+.main_title {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  padding: 3rem 0;
+}
+
 @media (max-width: 768px) {
   .feature_title {
     font-size: xx-large;
