@@ -40,11 +40,6 @@ export async function getStaticProps() {
 
  const featuredEvents = allEvents.meetups.filter((event) => event.featured);
 
-
- console.log(featuredEvents)
-
-
-
   return {
     props: {
       events: featuredEvents,

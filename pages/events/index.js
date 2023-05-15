@@ -46,9 +46,8 @@ function AllEventsPage({ events }) {
 }
 
 export async function getStaticProps() {
-
   const DB_STRING = `mongodb+srv://${process.env.mongoDB_username}:${process.env.mongoDB_password}@${process.env.mongoDB_cluster}.21rhrh2.mongodb.net/${process.env.mongoDB_database}?retryWrites=true&w=majority`;
-  
+
   const client = await MongoClient.connect(DB_STRING);
   const db = client.db();
   const meetupCollection = db.collection("meetups");
