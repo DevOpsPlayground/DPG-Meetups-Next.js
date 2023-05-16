@@ -2,22 +2,13 @@ import Head from "next/head";
 import { getFeaturedEvents } from "/helpers/api";
 import EventList from "./../components/../components/events/EventList";
 import styles from "./Index.module.css";
+import Loader from "/components/Loader";
 
 export default function Homepage({ events }) {
   if (!events.length) {
-    return (
-      <div className='loading_container'>
-        <div className='lds-ring'>
-          {" "}
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <p className='loading_text'>Getting your events...</p>
-      </div>
-    );
+    return <Loader />; 
   }
+
   return (
     <div className='Homepage'>
       <Head>
@@ -26,7 +17,9 @@ export default function Homepage({ events }) {
           content='Find a lot of great events that allow you to learn...'
         />
       </Head>
-      <h1 className={styles.main_title}>Welcome to DevOps Playground Events Page</h1>
+      <h1 className={styles.main_title}>
+        Welcome to DevOps Playground Events Page
+      </h1>
       <EventList events={events} />
     </div>
   );
