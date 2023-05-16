@@ -3,21 +3,11 @@ import { MdAccessTimeFilled } from "react-icons/md";
 import { IoLocation } from "react-icons/io5";
 import styles from "./IndividualEvent.module.css";
 import Image from "next/image";
+import Loader from "@/components/Loader";
 
-export default function IndividualEventPage({event}) {
+export default function IndividualEventPage({ event }) {
   if (!event) {
-    return (
-      <div className="loading_container">
-        <div className="lds-ring">
-          {" "}
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <p className="loading_text">Getting your event...</p>
-      </div>
-    );
+    return <Loader />;
   }
 
   return (
@@ -35,8 +25,8 @@ export default function IndividualEventPage({event}) {
       </div>
 
       <Image
-        src="/assets/audience.jpg"
-        alt="crowd sat with laptops in office"
+        src='/assets/audience.jpg'
+        alt='crowd sat with laptops in office'
         className={styles.image}
         height={830}
         width={630}
@@ -48,8 +38,6 @@ export default function IndividualEventPage({event}) {
 
 export async function getStaticProps(context) {
   const eventId = context.params.eventid;
-
-
   const event = await getEventById(eventId);
 
   return {

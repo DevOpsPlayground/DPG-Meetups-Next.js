@@ -7,7 +7,7 @@ const db_data = [
     location: "GlobalLogic – London office 2 More London Place · London",
     presenters: ["Patryk Pilecki", "Wale Salami"],
     title:
-      "DevOps Playground: Hands-on Intro to IaC with Terraform and Minecraft",
+      "🍞 DevOps Playground: Hands-on Intro to IaC with Terraform and Minecraft",
   },
   {
     date: "Tuesday, March 28, 2023 at 6:30 PM",
@@ -16,7 +16,7 @@ const db_data = [
     featured: true,
     location: "Manchester One 53 Portland Street · Manchester",
     presenters: ["Philip Walton"],
-    title: "DevOps Playground: Intro to NGINX - serving and routing basics",
+    title: "🍞 DevOps Playground: Intro to NGINX - serving and routing basics",
   },
   {
     date: "Thursday, February 23, 2023 at 6:00 PM",
@@ -25,7 +25,7 @@ const db_data = [
     featured: true,
     location: "GlobalLogic – London office 2 More London Place · London",
     presenters: ["James Sandford", "Wale Salami"],
-    title: "DevOps Playground: Building Hashicorp Vault plugin with GO",
+    title: "🍞 DevOps Playground: Building Hashicorp Vault plugin with GO",
   },
   {
     date: "Thursday, May 25, 2023 at 6:00 PM",
@@ -34,7 +34,7 @@ const db_data = [
     featured: false,
     location: "Manchester One 53 Portland Street · Manchester",
     presenters: ["Alicia Barczak"],
-    title: "DevOps Playground: Intro to React Server Components using Next.js",
+    title: "🍞 DevOps Playground: Intro to React Server Components using Next.js",
   },
   {
     date: "Wednesday, November 30, 2022 at 6:30 PM",
@@ -43,6 +43,6 @@ const db_data = [
     featured: false,
     location: "GlobalLogic – London office 2 More London Place · London",
     presenters: ["Matt Sellman", "Olwen Davies"],
-    title: "DevOps Playground: Testing Open Source API with Cucumber",
+    title: "🍞 DevOps Playground: Testing Open Source API with Cucumber",
   },
 ];
