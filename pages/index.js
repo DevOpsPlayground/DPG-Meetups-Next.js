@@ -4,9 +4,9 @@ import EventList from "./../components/../components/events/EventList";
 import styles from "./Index.module.css";
 import Loader from "/components/Loader";
 
-export default function Homepage({ events }) {
-  if (!events.length) {
-    return <Loader />; 
+export default function Homepage({ featuredEvents }) {
+  if (!featuredEvents.length) {
+    return <Loader />;
   }
 
   return (
@@ -17,10 +17,9 @@ export default function Homepage({ events }) {
           content='Find a lot of great events that allow you to learn...'
         />
       </Head>
-      <h1 className={styles.main_title}>
-        Welcome to DevOps Playground Events Page
-      </h1>
-      <EventList events={events} />
+
+      <h1 className='main_title'>Welcome to DevOps Playground Events Page</h1>
+      <EventList events={featuredEvents} />
     </div>
   );
 }
@@ -30,7 +29,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      events: events,
+      featuredEvents: events,
     },
     revalidate: 1800,
   };
