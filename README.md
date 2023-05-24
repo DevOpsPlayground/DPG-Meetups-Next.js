@@ -1,31 +1,31 @@
 ### Prerequisites (Your own machine)
-This playground uses the following technology so you will need to check they are installed:
+This playground uses the following technologies so you will need to check they are installed:
 
 -   Web Browser
 -   Code IDE (we use VS Code)
--   Terminal (We use Bash)
+-   Terminal (we use Bash)
 -   Node.js
 
-_**Network**_  The following ports will be used for the application and testing:
+_**Network**_  The following ports will be used for application and testing:
 -   3000 -> React application
 -   3001 -> Next.js application
 
 
 # Getting Started
 
-The playground uses React 18 and Next.js 13. Although no existing knowledge of either will be needed for this playground it would be beneficial to have basic knowledge of Javascript.
+This playground uses React 18 and Next.js 13. Although no existing knowledge of either application is needed, a basic knowledge of Javascript is beneficial.
 
 # Introduction
 
-In this playground, we'll explore React Server Components using Next.js, a leading framework for server-side web application development.
+The goal of this playground is to explore React Server Components using Next.js, a leading framework for server-side web application development.
 
-In the first part of our session, we'll dive into the emerging trend in Front-End Development, focusing on the migration of logic from the client to the server. This strategic shift addresses common challenges such as slow load times and Search Engine Optimization concerns, offering potential solutions.
+In the first part of our session, we highlight the emerging trend in Front-End Development, focusing on the migration of logic from the client to the server. This strategic shift addresses common challenges such as slow load times and Search Engine Optimization concerns, and offers potential solutions.
 
-In the second part, we'll delve into React Server Components and their pivotal role in transforming React into a comprehensive full-stack framework. We'll unlock the possibilities offered by Server-Side Rendering and React Server Components, showcasing how this approach enables developers to tackle the aforementioned challenges in web development.
+In the second part, we dive into React Server Components and their pivotal role in transforming React into a comprehensive full-stack framework. We'll unlock the possibilities offered by Server-Side Rendering and React Server Components, showcasing how this approach enables developers to tackle the aforementioned challenges in web development.
 
 # Part 1 
 
-In this section, we will explore the inner workings of a traditional React application. Our focus will narrow down to a specific timeframe within the application's lifecycle, specifically the events that unfold between a user entering a URL into the browser and the moment they witness meaningful content on the page.
+In this section, we explore the inner workings of a traditional React application, focusing on a specific timeframe within the application's lifecycle - specifically the events that unfold between the moment a user enters a URL into the browser and when they witness meaningful content on the page.
 
 <p align="center">
 <img width="668" alt="Screenshot 2023-05-23 at 10 06 27" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/9db157cc-5d35-4171-8ebe-b741d77ec4d5">
@@ -35,7 +35,7 @@ We will conclude that...
 
 # Part 2 
 
-In this part, we will transform a traditional React application from being client-side rendered to being server-side rendered using Next.js.
+In this part, we transform a traditional React application from being client-side rendered to being server-side rendered using Next.js.
 
 ##  Setting up the infrastructure:
 
@@ -51,14 +51,14 @@ This should bring up the following page:
 </p>
 
 #### Step 2
-Garb your meetup.com username. Example of meetup.com username is highlighted in yellow below (in this example, it is just the user's name and surname):
+Grab your meetup.com username. An example of a meetup.com username is highlighted in yellow below (in this example, it is just the user's name and surname):
 
 <p align="center">
 <img width="1721" alt="Screenshot 2023-05-23 at 17 30 23" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/64ea6f09-e762-47a3-8b4d-48f11a933c0b">
 </p>
 
 #### Step 3
-Insert your meetup.com username into the username box like in the following example. Make sure to use any capital letters as required:  
+Insert your meetup.com username into the username box as per the following example. Make sure to use capital letters as required:  
 
 <p align="center">
 <img width="640" alt="Screenshot 2023-05-23 at 11 31 32" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/dd37b03c-2e64-46f0-917a-fdd00ac923bd">
@@ -74,56 +74,56 @@ The submit button should take you to a page that looks like this:
 <img width="544" alt="Screenshot 2023-05-23 at 11 33 12" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/a8e6b536-6926-4ae6-a72a-5c19e7f4d207">
 </p>
 
- Essentially, you should have access to a terminal and a IDE (VS Code) links. 
+ Essentially, you should have access to a terminal and IDE (VS Code) links. 
  
  
 #### Step 5
-Copy and paste the terminal link into the address bar of your browser. This should take you to the terminal that looks something like this:
+Copy and paste the terminal link into the address bar of your browser. This should lead you to the terminal that looks something like this:
 
 <p align="center">
 <img width="687" alt="Screenshot 2023-05-23 at 11 35 57" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/7076d659-525e-4f96-a9c4-839c740bd6f7">
 </p>
 
 #### Step 6
-As prompted, enter the following password: 
+When prompted, enter the following password: 
 
 > Next23
 
 
-*Please be aware that when entering your password, it will not be visibly displayed on the screen as you type it. If you made a mistake, just refresh the page and try again.*
+*Please be aware, your password will not be visibly displayed on the screen as you type it. If you made a mistake, just refresh the page and try again.*
 
-If you have successfully logged in, your terminal should display the following message:
+Once you have successfully logged in, your terminal should display the following message:
 
 <p align="center">
 <img width="675" alt="Screenshot 2023-05-23 at 11 41 04" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/7fc373ff-4bb2-434d-ba7b-7a1e96a4327c">
 </p>
 
 #### Step 7
-Run the following commands in the terminal in the following order:
+Run the commands below in the terminal in the following order:
 
  1. > cd workdir
   2.  > cd DPG-Meetups-Next.js
    3. > npm i
    4. > npm run dev
 
-If all of your commands executed correctly, your terminal should display the following outputs:
+If all of your commands are executed correctly, your terminal should display the following outputs:
 
 <p align="center">
 <img width="1113" alt="Screenshot 2023-05-23 at 11 51 57" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/15dfee9f-7797-4d2a-b0a6-1c4c1f5431f2">
 </p>
 
 #### Step 8
-**KEEPT THE TERMINAL PAGE RUNNING** and open a new browser tab. 
+**KEEP THE TERMINAL PAGE RUNNING**, and open a new browser tab. 
 
 
 #### Step 9
-Go back to your terminal page and copy the terminal page URL. The URL should be a link ending in "devopsplayground.org:5050/wetty". For example:
+Go back to your terminal page, and copy the terminal page URL. The URL should be a link ending in "devopsplayground.org:5050/wetty". For example:
 
 <img width="517" alt="Screenshot 2023-05-23 at 11 53 44" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/46b41768-de12-461b-8e6c-dc2ad5779c92">
 
 
 #### Step 10
-In the new tab that you have opened as part of step 7 above, paste the terminal page URL that you have just copied as part of step 8. **DO NOT PRESS ENTER**.
+In the new tab you have opened as part of step 7 above, paste the terminal page URL that you have just copied as part of step 8. **DO NOT PRESS ENTER**.
 
 
 #### Step 11
@@ -134,13 +134,13 @@ Edit the URL that you have just copied into the new browser tab as part of step 
 </p>
 
 #### Step 12
-Press enter and check your application is running correctly. If it is running correctly, it should look like this:
+Press enter. If your application is running correctly, it should look like this: 
 
 <p align="center">
 <img width="1697" alt="Screenshot 2023-05-23 at 11 58 33" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/f97b0bfa-5204-44bb-9dad-72a29ad3b4ae">
 </p>
 
-If you are having any issues, please ask for help 😊. 
+If you are having any issues, please shout out for help 😊. 
 
 ### Opening the Next.js application in VS Code
 
@@ -158,7 +158,7 @@ You should be presented with the following page:
 
 #### Step 2
 
-Copy the IDE link
+Copy the IDE link.
 
 Open a new tab and paste that link into the address bar of the new tab. 
 
@@ -170,15 +170,15 @@ You should be presented with VS Code which should look something like this:
 
 #  Solutions
 
-##  Aim 1: fetch data from an API on the server using React Server  Component
+##  Aim 1: Fetch data from an API on the server using React Server Component
 
- 1. In VS Code, go to the index.js file which sits inside of the pages folder:
+ 1. In VS Code, go to the index.js file which sits inside the pages folder:
 
 <p align="center">
 <img width="351" alt="Screenshot 2023-05-23 at 13 47 24" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/cbea5182-6e7d-4527-832e-325eda0f0fec">
 </p>
 
-if you are in the right file, you should be presented with this code:
+If you are in the right file, you should be presented with this code:
 
 ```javascript
 import { getFeaturedEvents } from "/helpers/api";
@@ -208,8 +208,8 @@ export default function Homepage() {
 }
 ```
 
-2. At the bottom of the file and **OUTSIDE** of the Homepage component, we will create a React Server Component using Next.js ```getStaticProps``` function. 
-3. Inside of this function, we will return an object with a key of props:
+2. At the bottom of the file and **OUTSIDE** the Homepage component, create a React Server Component using Next.js ```getStaticProps``` function. 
+3. Inside this function, we will then return an object with a key of props:
 
 ```javascript
 export async function getStaticProps() {
@@ -275,7 +275,7 @@ export async function getStaticProps() {
 
 ```
 
-5. Once we have fetched ``featuredEvents`` from the API inside of getStaticProps, we can go back to put Homepage component and deconstruct ``featuredEvents`` that we are passing from getStaticProps as props as follows:
+5. Once we have fetched ``featuredEvents`` from the API inside of getStaticProps, we can go back to put Homepage component, and proceed to deconstruct ``featuredEvents`` that we are passing from getStaticProps as props:
 
 ```javascript
 export default function Homepage({featuredEvents}) {
@@ -286,7 +286,7 @@ export default function Homepage({featuredEvents}) {
 
 ```
 
-6. Once we have the ``featuredEvent`` data already in the Homepage component, we can remove any references to client side data fetching from that component. We will therefore delete:
+6. Once the ``featuredEvent`` data is in the Homepage component, we can remove any references to client-side data fetching from that component. We will therefore delete:
 - the ``useState`` hook
 - the ``useEffect`` hook
 - the ``Loader`` component 
@@ -324,9 +324,9 @@ Our running application should look like this:
 <img width="1724" alt="Screenshot 2023-05-23 at 14 05 29" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/8819a459-1a19-44c8-a953-ed2457212409">
 
 
-##  Aim 2: read data from a filesystem  on the server using React Server Component
+##  Aim 2: Read data from a filesystem on the server using React Server Component
 
-1. Comment out the current ``getStaticProps`` component or remove all of the code inside of it so it is empty for us to work with. 
+1. Either comment out the current ``getStaticProps`` component or remove all of the code inside of it, so that it is empty for us to work with. 
 2. You can also remove the ``getFeaturedEvents`` import at the top of the page so the overall code looks like this:
 
 ```javascript
@@ -359,7 +359,7 @@ export async function getStaticProps() {
 
 ```
 
-5. We will then construct the path between our current working directory and the file we are trying to read. To do that, we will import ``path`` from node and create a new variable which we can use to store our constructed path. 
+5. We will then construct the path between our current working directory and the file we are trying to read. To achieve this, import ``path`` from the node and create a new variable that we can use to store our constructed path. 
 6. We can then ensure that the constructed path is consumed by ``fs.readFile()``:
 
 ```javascript
@@ -373,7 +373,7 @@ export async function getStaticProps() {
 }
 
 ```
-6. We can now parse the data that we received from ``readFile()`` using the JSON object:
+6. We can now parse the data that we've received from ``readFile()`` using the JSON object:
 
 ```javascript
 export async function getStaticProps() {
@@ -400,7 +400,7 @@ export async function getStaticProps() {
 }
 ```
 
-8. Inside of our Homepage component we now need to ensure that:
+8. Inside our Homepage component we now need to ensure that:
  - we are destructuring the correct key (``allEvents``): 
  ```javascript
  export  default  function  Homepage({ allEvents }) {
@@ -425,7 +425,7 @@ export default function Homepage({allEvents}) {
 }
 ```
 
-9. the complete solution should look like this:
+9. The complete solution should look like this:
 
 ```javascript
 import EventList from "./../components/events/EventList";
@@ -463,16 +463,16 @@ export async function getStaticProps() {
 <img width="1696" alt="Screenshot 2023-05-23 at 14 35 53" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/7b6b0317-e414-44ad-a21d-475963024334">
 
 
-##  Aim 3: fetch data directly from a database on the server using React Server Component
+##  Aim 3: Fetch data directly from a database on the server using React Server Component
 
-1. Comment out the current getStaticProps component or remove all of the code inside of it so it is empty for us to work with. 
+1. Either comment out the current getStaticProps component, or remove all of the code inside of it, so it is empty for us to work with. 
 2. At the top of the file, we will import Mongo Client from monogodb.
 
 ```javascript
 import { MongoClient } from "mongodb"
 ```
 
-4. Inside of getStaticProps, we need to establish connection with MongoDB. We will use the ``MongoClient`` we have just imported as well as the connection string provided by MongoDB to do this. We have amended the connection string so it uses environment variables which include our credentials. 
+4. We need to establish a connection with MongoDB inside of getStaticProps. To do this, use the ``MongoClient`` we have just imported as well as the connection string provided by MongoDB. We have amended the connection string to use environment variables including our credentials. 
 
 ```javascript
 export async function getStaticProps() {
@@ -482,7 +482,7 @@ export async function getStaticProps() {
 
 ```
 
-5. Once we have established connection, we can connect to the database. 
+5. Once we have established a connection, we can connect to the database. 
 
 ```javascript
 export async function getStaticProps() {
@@ -522,7 +522,7 @@ export async function getStaticProps() {
 }
 ```
 
-8. Don't forget to close connection to your database once the data has been retrieved: 
+8. Don't forget to close the connection to your database once the data has been retrieved: 
 
 ```javascript
 export async function getStaticProps() {
@@ -539,7 +539,7 @@ export async function getStaticProps() {
 }
 ```
 
-9. Now we can return the retrieve data: 
+9. Now we can return the retrieved data: 
 
 ```javascript
 export async function getStaticProps() {
@@ -569,7 +569,7 @@ export async function getStaticProps() {
 }
 ```
 
-10. The complete solution should look like this:
+10. The complete solution should resemble this:
 
 ```javascript
 import EventList from "./../components/events/EventList";
@@ -614,7 +614,7 @@ export async function getStaticProps() {
 }
 ```
 
-11. The application should now look like this:
+11. Finally, this is how the application should now look like:
 
 <p align="center">
 <img width="1520" alt="Screenshot 2023-05-23 at 14 41 43" src="https://github.com/DevOpsPlayground/DPG-Meetups-Next.js/assets/101208108/f1ce9d6a-f91d-4328-babb-9eeecd374ed3">
