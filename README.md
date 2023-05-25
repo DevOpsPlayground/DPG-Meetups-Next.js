@@ -363,7 +363,7 @@ export async function getStaticProps() {
 6. We can then ensure that the constructed path is consumed by ``fs.readFile()``:
 
 ```javascript
-import "path" from "path" 
+import path from "path" 
 
 ....
 
